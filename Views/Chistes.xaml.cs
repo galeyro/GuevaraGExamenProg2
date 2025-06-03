@@ -1,21 +1,18 @@
-namespace GuevaraGExamenProg2.Views;
 using GuevaraGExamenProg2.Repositories;
+namespace GuevaraGExamenProg2.Views;
 
 public partial class Chistes : ContentPage
 {
     private ChistesRepository _context;
-    
-    _context = new ChistesRepository();
-
 
     public Chistes()
-	{
-		InitializeComponent();
-
-	}
-
-    private void OtroChisteButton_Clicked(object sender, EventArgs e)
     {
+        InitializeComponent();
+        _context = new ChistesRepository();
+    }
 
+    private async Task OtroChisteButton_Clicked(object sender, EventArgs e)
+    {
+        ChisteLabel.Text = await _context.ObtenerChistesAsync();
     }
 }
