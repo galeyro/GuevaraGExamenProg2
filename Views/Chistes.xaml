@@ -15,7 +15,7 @@
         <AbsoluteLayout>
             <Button
                 x:Name="OtroChisteButton"
-                Text="Generar otro chiste"
+                Text="Otro chiste"
                 Clicked="OtroChisteButton_Clicked"
                 AbsoluteLayout.LayoutBounds=".50,.9,200,60" 
                 AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
