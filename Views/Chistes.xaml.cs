@@ -11,8 +11,15 @@ public partial class Chistes : ContentPage
         _context = new ChistesRepository();
     }
 
-    private async Task OtroChisteButton_Clicked(object sender, EventArgs e)
+    private async Task CargarChiste()
     {
         ChisteLabel.Text = await _context.ObtenerChistesAsync();
     }
+
+    public void OtroChisteButton_Clicked(object sender, System.EventArgs e)
+    {
+        _ = CargarChiste();
+    }
+
+
 }
