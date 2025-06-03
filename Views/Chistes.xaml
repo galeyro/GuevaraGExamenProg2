@@ -3,24 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuevaraGExamenProg2.Views.Chistes"
              Title="Chistes">
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label 
-            x:Name="ChisteLabel"
-            Text="Soy un chiste label"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <AbsoluteLayout>
+        <VerticalStackLayout HorizontalOptions="Center"  VerticalOptions="Center">
+            
+            <Label 
+                x:Name="ChisteLabel"
+                Text="Soy un chiste label"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontAutoScalingEnabled="True"
+        </VerticalStackLayout>
 
+        <Button
+            x:Name="OtroChisteButton"
+            Text="Otro chiste"
+            Clicked="OtroChisteButton_Clicked"
+            AbsoluteLayout.LayoutBounds=".50,.9,200,60" 
+            AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
+            
 
+    </AbsoluteLayout>
 
-        <AbsoluteLayout>
-            <Button
-                x:Name="OtroChisteButton"
-                Text="Otro chiste"
-                Clicked="OtroChisteButton_Clicked"
-                AbsoluteLayout.LayoutBounds=".50,.9,200,60" 
-                AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
-        </AbsoluteLayout>
-    </VerticalStackLayout>
     
     
 </ContentPage>

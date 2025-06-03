@@ -26,7 +26,7 @@ namespace GuevaraGExamenProg2.Repositories
             string setup = json["setup"]?.ToString();
             string punchline = json["punchline"]?.ToString();
             
-            return $"{setup}\n{punchline}";
+            return $"{setup}\n\n{punchline}";
         }
 
     }
